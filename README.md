@@ -13,9 +13,11 @@
 
 This is an NPM package that provides random facts in various categories. The package includes the following categories:
 
-- Google
-- Software
 - Discord
+- Google
+- OpenAI
+- Software
+- Urlcut
 - Youtube
 
 ## Installation
