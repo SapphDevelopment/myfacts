@@ -3,6 +3,7 @@ import {
   googleFacts,
   softwareFacts,
   youtubeFacts,
+  urlcut
 } from "./facts/imports.js";
 
 function getFact(category, index) {
@@ -16,7 +17,9 @@ function getFact(category, index) {
     facts = softwareFacts;
   } else if (category === "Youtube") {
     facts = youtubeFacts;
-  } else {
+  } else if(category === "urlcut") {
+    facts = urlcut
+  }else {
     facts = [
       ...googleFacts,
       ...softwareFacts,
