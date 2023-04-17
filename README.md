@@ -13,6 +13,8 @@
 
 This is an NPM package that provides random facts in various categories. The package includes the following categories:
 
+## Categories
+
 - Discord
 - Google
 - OpenAI
@@ -44,7 +46,7 @@ const fact = getFact("Google");
 console.log(fact);
 ```
 
-This will log a random fact from the Google category to the console. You can replace "Google" with "Software" or "Discord" to get a random fact from those categories instead.
+This will log a random fact from the Google category to the console. You can replace "Google" with "Software" or "Discord" to get a random fact from those categories instead. More categories listed under the category list
 
 You can also optionally pass an index parameter to `getFact` to get a specific fact from the array:
 
