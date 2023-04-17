@@ -1,0 +1,25 @@
+{
+  "name": "myfacts",
+  "version": "1.0.0",
+  "description": "Get a random fact from our list",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaturnsDevelopment/myfacts.git"
+  },
+  "keywords": [
+    "facts",
+    "random-facts",
+    "myfacts"
+  ],
+  "author": "Ducko#7068",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaturnsDevelopment/myfacts/issues"
+  },
+  "homepage": "https://github.com/SaturnsDevelopment/myfacts#readme"
+}
