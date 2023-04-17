@@ -3,10 +3,25 @@
   "version": "1.1.1",
   "description": "Get a random fact from our list",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node src/test.js"
+    "test": "node dist/test.js",
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "prepare": "npm run build"
   },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "contributors": [
+    "Ducko <micasniebuhr@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SaturnsDevelopment/myfacts.git"
@@ -21,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/SaturnsDevelopment/myfacts/issues"
   },
-  "homepage": "https://github.com/SaturnsDevelopment/myfacts#readme"
+  "homepage": "https://github.com/SaturnsDevelopment/myfacts#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }

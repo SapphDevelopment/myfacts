@@ -1,4 +1,4 @@
-export const urlcutfacts = [
+export const urlcutfacts: string[] = [
   "Urlcut is a link shortening service that allows users to create shorter, more memorable URLs for their links.",
   "Urlcut was publicly released on April 17th, 2023 and is built using Next.js.",
   "Urlcut requires users to create an account to use its features.",

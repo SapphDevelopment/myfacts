@@ -1,4 +1,4 @@
-export const googleFacts = [
+export const googleFacts: string[] = [
   "Google's first office was a garage in Menlo Park, California.",
   "Google's first tweet ever sent out was 'I'm feeling lucky' in binary code.",
   "Google has a company culture that is known for its employee perks, including free meals, on-site doctors and health services, and generous paid time off policies.",

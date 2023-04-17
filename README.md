@@ -15,6 +15,7 @@ This is an NPM package that provides random facts in various categories. The pac
 
 ## Categories
 
+- Random
 - Discord
 - Google
 - OpenAI
