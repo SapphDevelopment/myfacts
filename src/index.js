@@ -1,5 +1,6 @@
 import {
   discordFacts,
+  dogFacts,
   googleFacts,
   openaiFacts,
   softwareFacts,
@@ -12,6 +13,8 @@ function getFact(category, index) {
 
   if (category === "Discord") {
     facts = discordFacts;
+  } else if (category === "Dogs") {
+    facts = dogFacts;
   } else if (category === "Google") {
     facts = googleFacts;
   } else if (category === "OpenAI") {
@@ -25,6 +28,7 @@ function getFact(category, index) {
   } else {
     facts = [
       ...discordFacts,
+      ...dogFacts,
       ...googleFacts,
       ...openaiFacts,
       ...softwareFacts,
