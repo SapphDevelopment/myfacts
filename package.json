@@ -5,8 +5,6 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "test": "node dist/test.js",
     "build": "tsc",
@@ -15,15 +13,10 @@
   },
   "directories": {
     "lib": "src",
-    "test": "test"
     "test": "node dist/test.js",
     "build": "tsc",
     "prepublish": "npm run build",
     "prepare": "npm run build"
-  },
-  "directories": {
-    "lib": "src",
-    "test": "test"
   },
   "files": [
     "dist",
