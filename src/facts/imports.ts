@@ -1,5 +1,5 @@
 import { discordFacts } from "./discord.js";
-import { dogFacts } from "./dog.js";
+import { dogFacts } from "./dogs.js";
 import { googleFacts } from "./google.js";
 import { openaiFacts } from "./openai.js";
 import { softwareFacts } from "./software.js";

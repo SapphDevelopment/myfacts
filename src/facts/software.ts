@@ -1,4 +1,4 @@
-export const softwareFacts = [
+export const softwareFacts: string[] = [
   "The first computer program was written by Ada Lovelace in the mid-1800s.",
   "The first software bug was a real bug - a moth stuck in a Harvard Mark II computer in 1947.",
   "The first computer virus was created in 1971 and was called the 'Creeper' virus.",

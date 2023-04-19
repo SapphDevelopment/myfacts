@@ -1,4 +1,4 @@
-export const discordFacts = [
+export const discordFacts: string[] = [
   "Discord was originally designed to be a communication tool for gamers.",
   "Discord's logo is a game controller combined with a chat bubble.",
   "Discord was founded in 2015 by Jason Citron and Stanislav Vishnevskiy.",

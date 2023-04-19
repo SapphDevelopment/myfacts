@@ -1,4 +1,4 @@
-export const youtubeFacts = [
+export const youtubeFacts: string[] = [
   "YouTube was created by three former PayPal employees in February 2005.",
   "The first YouTube video to reach 1 million views was a Nike commercial featuring Ronaldinho in 2005.",
   "YouTube was blocked in China in 2009 and has remained inaccessible since then.",

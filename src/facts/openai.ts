@@ -1,4 +1,4 @@
-export const openaiFacts = [
+export const openaiFacts: string[] = [
   "OpenAI was founded in 2015 by Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba.",
   "OpenAI's mission is to create and promote friendly AI for the betterment of humanity.",
   "OpenAI is focused on developing artificial intelligence in a safe and beneficial manner, and has published research on topics such as reinforcement learning, natural language processing, and computer vision.",

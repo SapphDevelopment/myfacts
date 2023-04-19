@@ -8,8 +8,23 @@ import {
   youtubeFacts,
 } from "./facts/imports.js";
 
-function getFact(category, index) {
-  let facts = [];
+type Category =
+  | "Discord"
+  | "Dogs"
+  | "Google"
+  | "OpenAI"
+  | "Software"
+  | "Urlcut"
+  | "Youtube"
+  | "Random";
+
+interface Fact {
+  category: Category;
+  fact: string;
+}
+
+function getFact(category: Category, index?: number): Fact {
+  let facts: string[] = [];
 
   if (category === "Discord") {
     facts = discordFacts;
@@ -25,7 +40,7 @@ function getFact(category, index) {
     facts = urlcutfacts;
   } else if (category === "Youtube") {
     facts = youtubeFacts;
-  } else {
+  } else if (category === "Random") {
     facts = [
       ...discordFacts,
       ...dogFacts,
@@ -37,7 +52,8 @@ function getFact(category, index) {
     ];
   }
 
-  const factIndex = index !== undefined ? index : Math.floor(Math.random() * facts.length);
+  const factIndex =
+    index !== undefined ? index : Math.floor(Math.random() * facts.length);
   const fact = facts[factIndex];
   return { category, fact };
 }
