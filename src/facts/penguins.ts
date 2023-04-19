@@ -1,4 +1,4 @@
-export const penguinFacts = [
+export const penguinFacts: string[] = [
     "Penguins are flightless birds that live in the Southern Hemisphere, primarily in Antarctica, but also in parts of South America, Africa, Australia, and New Zealand.",
     "There are 18 different species of penguins, ranging in size from the tiny fairy penguin, which is just over a foot tall, to the emperor penguin, which can grow up to four feet tall.",
     "Penguins are adapted to living in cold, harsh environments and have several unique features to help them survive, including a thick layer of blubber, a waterproof coat of feathers, and the ability to huddle together for warmth.",

@@ -1,4 +1,4 @@
-export const catFacts = [
+export const catFacts: string[] = [
     "Cats are known for their agility and balance, and they have a highly flexible spine and powerful muscles that allow them to twist and turn in mid-air and land on their feet.",
     "Cats are obligate carnivores, which means they require a diet that is high in protein and other nutrients found only in meat. They are also one of the few animals that cannot taste sweetness.",
     "The average lifespan of a cat is around 15 years, although some cats can live into their 20s or even 30s with proper care.",

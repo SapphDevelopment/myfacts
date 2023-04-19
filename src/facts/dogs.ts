@@ -1,4 +1,4 @@
-export const dogFacts = [
+export const dogFacts: string[] = [
     "Dogs are one of the most popular pets in the world, and there are over 300 different breeds.",
     "Dogs have been domesticated for thousands of years and were originally bred for specific tasks such as hunting, herding, or guarding.",
     "The most popular breed in the United States is the Labrador Retriever, followed by the German Shepherd and the Golden Retriever.",
