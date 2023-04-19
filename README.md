@@ -14,9 +14,8 @@
 This is an NPM package that provides random facts in various categories. The package includes the following categories:
 
 ## Categories
-
+- Animals (Cats, Dogs, Penguins; subcategories can be called separately)
 - Discord
-- Dogs
 - Google
 - OpenAI
 - Software

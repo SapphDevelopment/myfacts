@@ -1,18 +1,23 @@
 import {
+  catFacts,
   discordFacts,
   dogFacts,
   googleFacts,
   openaiFacts,
+  penguinFacts,
   softwareFacts,
   urlcutfacts,
   youtubeFacts,
 } from "./facts/imports.js";
 
 type Category =
+  | "Animals"
+  | "Cats"
   | "Discord"
   | "Dogs"
   | "Google"
   | "OpenAI"
+  | "Penguins"
   | "Software"
   | "Urlcut"
   | "Youtube"
@@ -25,8 +30,15 @@ interface Fact {
 
 function getFact(category: Category, index?: number): Fact {
   let facts: string[] = [];
-
-  if (category === "Discord") {
+  if (category === "Animals"){
+    facts = [
+      ...catFacts,
+      ...dogFacts,
+      ...penguinFacts,
+    ];
+  } else if (category === "Cats"){
+    facts = catFacts;
+  } else if (category === "Discord") {
     facts = discordFacts;
   } else if (category === "Dogs") {
     facts = dogFacts;
@@ -34,6 +46,8 @@ function getFact(category: Category, index?: number): Fact {
     facts = googleFacts;
   } else if (category === "OpenAI") {
     facts = openaiFacts;
+  } else if (category === "Penguins") {
+    facts = penguinFacts;
   } else if (category === "Software") {
     facts = softwareFacts;
   } else if (category === "Urlcut") {
@@ -42,10 +56,12 @@ function getFact(category: Category, index?: number): Fact {
     facts = youtubeFacts;
   } else if (category === "Random") {
     facts = [
+      ...catFacts,
       ...discordFacts,
       ...dogFacts,
       ...googleFacts,
       ...openaiFacts,
+      ...penguinFacts,
       ...softwareFacts,
       ...urlcutfacts,
       ...youtubeFacts,
