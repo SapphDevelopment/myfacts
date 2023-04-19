@@ -1,8 +1,10 @@
 import {
+  catFacts,
   discordFacts,
   dogFacts,
   googleFacts,
   openaiFacts,
+  penguinFacts,
   softwareFacts,
   urlcutfacts,
   youtubeFacts,
@@ -10,8 +12,15 @@ import {
 
 function getFact(category, index) {
   let facts = [];
-
-  if (category === "Discord") {
+  if (category === "Animals"){
+    facts = [
+      ...catFacts,
+      ...dogFacts,
+      ...penguinFacts,
+    ];
+  } else if (category === "Cats"){
+    facts = catFacts;
+  } else if (category === "Discord") {
     facts = discordFacts;
   } else if (category === "Dogs") {
     facts = dogFacts;
@@ -19,6 +28,8 @@ function getFact(category, index) {
     facts = googleFacts;
   } else if (category === "OpenAI") {
     facts = openaiFacts;
+  } else if (category === "Penguins") {
+    facts = penguinFacts;
   } else if (category === "Software") {
     facts = softwareFacts;
   } else if (category === "Urlcut") {
@@ -27,10 +38,12 @@ function getFact(category, index) {
     facts = youtubeFacts;
   } else {
     facts = [
+      ...catFacts,
       ...discordFacts,
       ...dogFacts,
       ...googleFacts,
       ...openaiFacts,
+      ...penguinFacts,
       ...softwareFacts,
       ...urlcutfacts,
       ...youtubeFacts,
