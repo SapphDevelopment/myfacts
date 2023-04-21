@@ -18,6 +18,7 @@ This is an NPM package that provides random facts in various categories. The pac
 - Discord
 - Google
 - OpenAI
+- Research (Biology, Geography, Science, Space; subcategories can be called separately)
 - Software
 - Urlcut
 - Youtube
