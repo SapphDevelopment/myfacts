@@ -1,105 +1,26 @@
-import {
-  biologyFacts,
-  catFacts,
-  discordFacts,
-  dogFacts,
-  geographyFacts,
-  googleFacts,
-  openaiFacts,
-  penguinFacts,
-  scienceFacts,
-  softwareFacts,
-  spaceFacts,
-  urlcutfacts,
-  youtubeFacts,
-} from "./facts/imports.js";
+import axios from 'axios';
 
-type Category =
-  | "Animals"
-  | "Biology"
-  | "Cats"
-  | "Discord"
-  | "Dogs"
-  | "Geography"
-  | "Google"
-  | "OpenAI"
-  | "Penguins"
-  | "Research"
-  | "Science"
-  | "Software"
-  | "Space"
-  | "Urlcut"
-  | "Youtube"
-  | "Random";
+type Category = "Bird" | "Cat" | "Dog" | "Fox" | "Koala" | "Panda" | "Random";
 
 interface Fact {
   category: Category;
   fact: string;
 }
 
-function getFact(category: Category, index?: number): Fact {
-  let facts: string[] = [];
-  if (category === "Animals"){
-    facts = [
-      ...catFacts,
-      ...dogFacts,
-      ...penguinFacts,
-    ];
-  } else if (category === "Biology"){
-    facts = biologyFacts;
-  } else if (category === "Cats"){
-    facts = catFacts;
-  } else if (category === "Discord") {
-    facts = discordFacts;
-  } else if (category === "Dogs") {
-    facts = dogFacts;
-  } else if (category === "Geography"){
-    facts = geographyFacts;
-  } else if (category === "Google") {
-    facts = googleFacts;
-  } else if (category === "OpenAI") {
-    facts = openaiFacts;
-  } else if (category === "Penguins") {
-    facts = penguinFacts;
-  } else if (category === "Research") {
-    facts = [
-      ...biologyFacts,
-      ...geographyFacts,
-      ...scienceFacts,
-      ...spaceFacts,
-    ];
-  } else if (category === "Science") {
-    facts = scienceFacts;
-  } else if (category === "Software") {
-    facts = softwareFacts;
-  } else if (category === "Space") {
-    facts = spaceFacts
-  } else if (category === "Urlcut") {
-    facts = urlcutfacts;
-  } else if (category === "Youtube") {
-    facts = youtubeFacts;
-  } else if (category === "Random") {
-    facts = [
-      ...biologyFacts,
-      ...catFacts,
-      ...discordFacts,
-      ...dogFacts,
-      ...geographyFacts,
-      ...googleFacts,
-      ...openaiFacts,
-      ...penguinFacts,
-      ...scienceFacts,
-      ...softwareFacts,
-      ...spaceFacts,
-      ...urlcutfacts,
-      ...youtubeFacts,
-    ];
-  }
+async function getFact(category: Category, index?: number): Promise<Fact> {
+  const baseUrl: string = "https://some-random-api.com/facts/";
+  const url: string = category !== "Random" ? `${baseUrl}${category.toLowerCase()}` : baseUrl;
 
-  const factIndex =
-    index !== undefined ? index : Math.floor(Math.random() * facts.length);
-  const fact = facts[factIndex];
-  return { category, fact };
+  try {
+    const response = await axios.get(url);
+    const facts: string[] = category !== "Random" ? [response.data.fact] : response.data.facts;
+    const fact: string = index !== undefined ? facts[index] : facts[Math.floor(Math.random() * facts.length)];
+
+    return { category, fact };
+  } catch (error) {
+    console.error("Failed to fetch facts:", error);
+    throw new Error("Failed to fetch facts. Please try again later.");
+  }
 }
 
 export default getFact;
